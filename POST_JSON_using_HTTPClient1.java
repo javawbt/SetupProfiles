@@ -55,7 +55,7 @@ public class POST_JSON_using_HTTPClient1 {
 		client = HttpClients.createDefault();
 
 		httpPost = new HttpPost("http://10.10.8.32:8080/AppCenter/services/rest/login");
-		String json = "{\"username\":\"admin\",\"password\":\"admin\"}";
+		String json = "{\"username\":\"xxxxx\",\"password\":\"xxxxxx\"}";
 		StringEntity entity = new StringEntity(json);
 		httpPost.setEntity(entity);
 		httpPost.setHeader("Content-type", "application/json");
@@ -90,8 +90,7 @@ public class POST_JSON_using_HTTPClient1 {
 		System.out.println("Error Code:	" + actualErrorCode);
 
 		assertEquals(success, actualStatus);
-		// Assert.assertTrue("status".equals("success"));
-		// Assert.assertTrue(success.equals(actualStatus));
+		 
 	}
 	@Test
 	public void LoginAndEstablishSession1() throws ClientProtocolException, IOException, ParseException {
@@ -113,11 +112,8 @@ public class POST_JSON_using_HTTPClient1 {
  	    System.out.println(response);
  	    System.out.println(response.toString());
  	    
- 	   assertEquals(200, response.getStatusLine().toString());
- 	  //assertEquals(200, response.getStatusLine().getStatusCode());
- 	    //assertEquals(success, actualStatus);
- 	  // Assert.assertTrue("status".equals("success"));
-		// Assert.assertTrue(success.equals(actualStatus));
+ 	   assertEquals( 200, response.getStatusLine().toString());
+  
 	}
 }
 
